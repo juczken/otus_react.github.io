@@ -59,12 +59,23 @@ module.exports = (_, args) => {
             {
               loader: MiniCssExtractPlugin.loader,
             },
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: '[name]_[local]-[hash:base64:5]',
+                },
+              },
+            },
           ],
         },
         {
           test: /\.svg/,
           type: 'asset/inline',
+        },
+        {
+          test: /\.(png|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
         },
         {
           test: /\.s[ac]ss$/i,
