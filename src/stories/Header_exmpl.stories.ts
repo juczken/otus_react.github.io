@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Header } from './Header';
+import { Header_exmpl} from './Header_exmpl';
 
-const meta: Meta<typeof Header> = {
-  title: 'Example/Header',
-  component: Header,
+const meta: Meta<typeof Header_exmpl> = {
+  title: 'Example/Header_exmpl',
+  component: Header_exmpl,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
