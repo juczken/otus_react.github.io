@@ -1,0 +1,54 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.imageWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    max-height: 10rem;
+}
+
+.infoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.title {
+    white-space:nowrap;
+}
+
+.cartWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.counter {
+    /* padding: 0.5rem; */
+    width: 6rem;
+    height: 30px;
+}
+
+.price {
+    white-space: nowrap;
+}
+
+.removeWrapper {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove {
+    color: #000000;
+    background-color: #f00000;
+}
