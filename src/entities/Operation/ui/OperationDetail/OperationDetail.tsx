@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'clsx';
 import styles from './OperationDetail.module.css';
-import Button from '../../../../shared/ui/Button';
+import Button from '../../../../shared/ui/Button/Button';
 
 // type OperationDetailProps = Pick<Operation & AddPropertyPrefix<Category, 'category'>, 'amount' | 'categoryName' | 'createdAt' | 'desc' | 'name'>
 type OperationDetailProps = Pick<Operation, 'amount' | 'createdAt' | 'desc' | 'name'> & {

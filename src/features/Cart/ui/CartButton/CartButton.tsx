@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import cn from 'clsx';
 import style from './CartButton.module.css';
-import Counter from '../../../../shared/ui/Counter';
-import Button from '../../../../shared/ui/Button';
+import Counter from '../../../../shared/ui/Counter/Counter';
+import Button from '../../../../shared/ui/Button/Button';
 
 type CartButtonProps = {
   count: number;

@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import style from './CartItem.module.css'
-import Counter from "../../../../shared/ui/Counter"
-import Button from "../../../../shared/ui/Button"
+import Counter from "../../../../shared/ui/Counter/Counter"
+import Button from "../../../../shared/ui/Button/Button"
 
 type CartItemProps = Pick<Product, 'price' | 'photo' | 'name'> & {
     count: number,
