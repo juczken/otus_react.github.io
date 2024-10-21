@@ -3,16 +3,31 @@ import cn from 'clsx';
 import style from './Button.module.css';
 
 type ButtonProps = {
-  caption: string;
+  lable: string;
   className: string;
+  onClick?: () => void;
   disabled?: boolean;
 };
 
-const Button: FC<ButtonProps> = ({ caption, className, disabled = true }) => {
+const Button: FC<ButtonProps> = ({
+  lable,
+  className,
+  disabled = true,
+  onClick = () => { }
+}) => {
   return (
     <div className={style.wrapper}>
-      <button className={cn({[className]:!disabled}, style.button, { [style.button_active]: !disabled, [style.button_disable]:disabled })} disabled={disabled}>
-        {caption}
+      <button
+        className={cn({
+          [style.button_disable]: disabled,
+          [style.button_enable]: !disabled,
+          [className]: !disabled,
+          [style.button]: true,
+        })}
+        disabled={disabled}
+        onClick={onClick}
+      >
+        {lable}
       </button>
     </div>
   );

@@ -13,7 +13,8 @@ const CartButton: FC<CartButtonProps> = ({ count, disabled }) => {
   return (
     <div className={cn(style.wrapper)}>
       {count === 0 ? (
-        <Button className={cn(style.wrapper, style.button)} caption="В корзину" disabled={disabled} />
+        <Button className={cn(style.button)} lable="В корзину" disabled={disabled} />
+        // <Button className={cn(style.wrapper, style.button)} caption="В корзину" disabled={disabled} />
       ) : (
         <Counter count={count} min={0} disabled={disabled} />
       )}

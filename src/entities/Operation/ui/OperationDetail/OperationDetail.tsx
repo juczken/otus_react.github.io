@@ -22,7 +22,7 @@ const OperationDetail: React.FC<OperationDetailProps> = ({ name, categoryName, c
       <div className={cn(styles.description)}>{desc || 'undescrible'}</div>
       <div className={cn(styles.editWrapper)} >
         <div className={cn(styles.edit)} >
-          <Button className={cn(styles.editButton)} caption='Редактировать' />
+          <Button className={cn(styles.editButton)} lable='Редактировать' />
         </div>
       </div>
     </div>

@@ -13,15 +13,17 @@
 }
 
 .button_disable{
-    background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
-    color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
-    border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));}
-
-.button_active{
-    color: #000000;
+    background-color: var(--disable-color);
+    color: var(--disable-text-color);
 }
 
-.button_active:active {
-    background: #e5e5e5;
+.button_enable{
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    /* background-color: #999999; */
+}
+
+.button_enable:active {
+    background: var(--active-color);
     outline: none;
 }

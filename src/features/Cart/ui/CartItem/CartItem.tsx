@@ -24,7 +24,7 @@ const CartItem: FC<CartItemProps> = ({ name, count, photo, price }) => {
                     </div>
                     <div className={style.price}>{(count * price).toFixed(2)}&nbsp;руб.</div>
                     <div className={style.removeWrapper}>
-                        <Button className={style.remove} caption="Удалить" />
+                        <Button className={style.remove} lable="Удалить" />
                     </div>
                 </div>
             </div>
