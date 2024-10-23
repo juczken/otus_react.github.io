@@ -1,7 +1,7 @@
 .wrapper {
     height: calc(100% - 2px);
     width: calc(100% - 2px);
-    border: 1px solid gray;
+    border: 1px solid var(--border-color);
 }
 
 .counter {
@@ -10,8 +10,8 @@
     border-style: none;
 }
 
-.counter_active:active {
-    background: #e5e5e5;
+.counter_enable:active {
+    background: var(--active-color);
     outline: none;
 }
 
