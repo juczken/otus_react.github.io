@@ -13,11 +13,8 @@ export type CounterProps = {
   onInputChange?: (value: number) => void;
 };
 
-const Counter: FC<CounterProps> = ({ count, min, max, disabled = true, onIncrement = () => { }, onDecrement = () => { }, onInputChange = (value: number) => { } }) => {
-  // const [countValue, setCountValue] = useState(count);
-  console.log({ caption: 'component', count, min, max, disabled, onIncrement, onDecrement, onInputChange })
-  console.log({ style: !disabled && (min === undefined || count > min), disabled: disabled || (min && count <= min) })
-  console.log({ style: !disabled && (max === undefined || count < max), disabled: disabled || (max && count >= max) })
+const Counter: FC<CounterProps> = ({ count, min, max, disabled = true, onIncrement = () => { /* do nothing */ }, onDecrement = () => { /* do nothing */ }, onInputChange = (value: number) => { /* do nothing */ } }) => {
+
   return (
     <div className={cn(style.wrapper)}>
       <button
