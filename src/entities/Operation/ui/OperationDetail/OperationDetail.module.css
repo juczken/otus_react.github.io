@@ -60,6 +60,6 @@
 }
 
 .editButton{
-    color: #000000;
+    color: var(--text-color);
     background-color: lightblue;
 }
