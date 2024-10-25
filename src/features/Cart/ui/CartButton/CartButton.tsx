@@ -1,35 +1,72 @@
-import React, { FC } from 'react';
+// CartButton.tsx
+import React, { FC, useState } from 'react';
 import cn from 'clsx';
+import buttonStyle from '../../../../shared/ui/Button/Button.module.css';
 import style from './CartButton.module.css';
 import Counter from '../../../../shared/ui/Counter/Counter';
-import Button from '../../../../shared/ui/Button/Button';
 
-type CartButtonProps = {
+export type CartButtonProps = {
   count: number;
+  // min?: number;
+  max?: number;
   disabled?: boolean;
+  onCountChange?: (value: number) => void;
 };
 
-const CartButton: FC<CartButtonProps> = ({ count, disabled }) => {
-  return (
+const CartButton: FC<CartButtonProps> = ({ count, max, disabled, onCountChange = (value: number) => { /* do nothing */ } }) => {
+
+    const Increment = () => onCountChange(count + 1);
+    const Decrement = () => onCountChange(count - 1);
+    const InputChange = (value: number) => onCountChange(value);
+
+    return (
     <div className={cn(style.wrapper)}>
       {count === 0 ? (
-        <Button className={cn(style.button)} lable="В корзину" disabled={disabled} />
-        // <Button className={cn(style.wrapper, style.button)} caption="В корзину" disabled={disabled} />
+        <button className={
+          cn({
+            [buttonStyle.button_disable]: disabled,
+            [buttonStyle.button_enable]: !disabled,
+            [style.button]: !disabled,
+            [buttonStyle.button]: true,
+          })}
+          disabled={disabled}
+          onClick={() => InputChange(1)}
+        >{'В корзину'}</button>
       ) : (
-        <Counter count={count} min={0} disabled={disabled} />
+        <Counter count={count} min={0} max={max} disabled={disabled} onDecrement={Decrement} onIncrement={Increment} onInputChange={InputChange} />
       )}
     </div>
   );
 };
-// const CartButton: FC<CartButtonProps> = ({ count }) => {
-//     return (
-//         <div className="cart_container">
-//             <button className="cart_container cartButton" hidden={count > 0}>В корзину</button>
-//             <div className="cartInputContainer" hidden={count === 0}>
-//                 <button className="cartCounter" hidden={count === 0}>-</button>
-//                 <input className="cartInput" type="number" value={count} hidden={count === 0} />
-//                 <button className="cartCounter" hidden={count === 0}>+</button>
-//             </div>
-//         </div>)
-// }
+
 export default CartButton;
+
+// import React, { FC } from 'react';
+// import cn from 'clsx';
+// import style from './CartButton.module.css';
+// import Counter from '../../../../shared/ui/Counter/Counter';
+// import Button from '../../../../shared/ui/Button/Button';
+
+// export type CartButtonProps = {
+//   count: number;
+//   // min?: number;
+//   max?: number;
+//   disabled?: boolean;
+//   onCountChange?: (value: number) => void;
+// };
+
+// const CartButton: FC<CartButtonProps> = ({ count, max, disabled, onCountChange = (value: number) => { /* do nothing */ } }) => {
+
+//   const onIncrement = () => onCountChange(count + 1);
+//   const onDecrement = () => onCountChange(count - 1);
+//   const onInputChange = (value: number) => onCountChange(value);
+
+//   return (
+//     <div className={cn(style.wrapper)}>
+//       {count === 0
+//         ? (<Button className={cn(style.button)} lable="В корзину" disabled={disabled} onClick={onIncrement} />)
+//         : (<Counter count={count} min={0} max={max} disabled={disabled} onIncrement={onIncrement} onDecrement={onDecrement} onInputChange={onInputChange} />)}
+//     </div>
+//   );
+// };
+// export default CartButton;
