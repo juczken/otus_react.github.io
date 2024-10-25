@@ -4,30 +4,8 @@ import Counter, { CounterProps } from './Counter';
 import '../../../app/App.css';
 import { count } from 'console';
 
-// const meta: Meta<typeof Counter> = {
-//   title: 'Shared/Counter',
-//   component: Counter,
-//   tags: ['autodocs'],
-//   parameters: {
-//   },
-//   decorators: [(story) => (
-//     <div style={{ height: '30px', width: '100px'}}>
-//       {story()}
-//     </div>)],
-// };
-
-// export default meta;
-// type Story = StoryObj<typeof meta>;
-
-// export const SimpleCounter: Story = {
-//   args: {
-//     count: 0,
-//     disabled: false,
-//   }
-// }
-
 const Template = (args: CounterProps) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(args.count);
 
   const onIncrement = () => setCount(count + 1);
   const onDecrement = () => setCount(count - 1);
