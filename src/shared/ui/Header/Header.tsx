@@ -1,11 +1,19 @@
 import React from 'react';
 import style from './Header.module.css';
 import Logo from '../Logo/Logo';
+import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 const Header: React.FC = () => {
   return (
     <div className={style.header}>
-      <Logo />
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Logo />
+      </div>
+      {/* <div className={style.themeSwitcher} onClick={() => toggleTheme()}>{'\u{263d}\u{263c}'}</div> */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        {/* <button className={style.themeSwitcher} onClick={() => toggleTheme()}>{theme === 'light' ? '\u{263d}' : '\u{263c}'}</button> */}
+        <ThemeSwitcher />
+      </div>
     </div>
   );
 };
