@@ -1,6 +1,9 @@
 .wrapper{
     display: flex;
     gap: 5%;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-color: var(--border-color);
 }
 
 .imageWrapper{
