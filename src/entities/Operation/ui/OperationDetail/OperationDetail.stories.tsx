@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import OperationDetail from './OperationDetail';
+import ThemeProvider from '../../../../shared/providers/ThemeProvider/ThemeProvider';
+import { LanguageProvider } from '../../../../shared/providers/LanguageProvider/LanguageProvider';
+import React from 'react';
 
 const meta: Meta<typeof OperationDetail> = {
   title: 'Entities/OperationDetail',
@@ -13,6 +16,12 @@ const meta: Meta<typeof OperationDetail> = {
     desc: { control: 'text', },
     name: { control: 'text', },
   },
+  decorators: [(story) => (
+    <ThemeProvider>
+      <LanguageProvider>
+        {story()}
+      </LanguageProvider>
+    </ThemeProvider>)],
 };
 
 export default meta;

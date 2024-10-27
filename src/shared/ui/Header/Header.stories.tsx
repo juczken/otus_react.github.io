@@ -2,6 +2,8 @@ import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import Header from './Header';
 import ThemeProvider from '../../providers/ThemeProvider/ThemeProvider';
+import { LanguageProvider } from '../../providers/LanguageProvider/LanguageProvider';
+import '../../../app/localization'
 
 const meta: Meta<typeof Header> = {
   title: 'Shared/Header',
@@ -12,7 +14,9 @@ const meta: Meta<typeof Header> = {
   },
   decorators: [(story) => (
     <ThemeProvider>
-      {story()}
+      <LanguageProvider>
+        {story()}
+      </LanguageProvider>
     </ThemeProvider>)],
 };
 
