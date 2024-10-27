@@ -11,7 +11,7 @@ const ModalViewer: FC<ModalViewerProps> = ({ text }) => {
 
     return (
         <>
-            <Modal visible={visible} setVisible={SetVisible} children={inputText} />
+            <Modal visible={visible} setVisible={SetVisible}>{inputText}</Modal>
             <input value={inputText} onChange={(e) => SetInputText(prev => e.target.value)} />
             <button onClick={() => SetVisible(() => true)}>Show modal</button>
         </>
