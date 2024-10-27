@@ -8,7 +8,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const [currentLanguage, setCurrentLanguage] = useState(i18n.language as Languages);
 
     const switchLanguage = (language: Languages) => {
-debugger
         i18n.changeLanguage(language); // смена языка в i18next
         setCurrentLanguage(language);
     };
