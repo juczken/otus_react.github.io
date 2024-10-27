@@ -1,0 +1,24 @@
+{
+    "categoty": {},
+    "operation": {
+        "amount": "{{amount, currency}}",
+        "description_undefined": "неописуемо"
+    },
+    "product": {
+        "price": "{{price, currency}}",
+        "oldPrice": "{{oldPrice, currency}}",
+        "description_undefined": "неописуемо",
+        "photo_alt": "Продукт {{name}}"
+    },
+    "OperationDetail": {
+        "edit": "Редактировать"
+    },
+    "ProductDetail": {},
+    "ProductItem": {},
+    "CartButton": {
+        "button": "В корзину"
+    },
+    "CartItem": {
+        "button": "Удалить"
+    }
+}
