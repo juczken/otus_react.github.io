@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import cn from 'clsx'
+import style from './App.css';
+import ThemeProvider from '../shared/providers/ThemeProvider/ThemeProvider';
+import Layout from '../shared/ui/Layout/Layout';
+import './localization'
+import { LanguageProvider } from '../shared/providers/LanguageProvider/LanguageProvider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Привет, я Семён, инженер, backend-C#-developer.
-          </p>
-          <p>
-            На работе понадобился фронт, а я не успел шагнуть назад, по этому теперь с вами. Позаботьтесь обо мне:)
-          </p>
-          <p>
-            К глубокому моему сожалению, вот вообще совсем ничего не знаю о frontend,  потому присоединюсь к вечеру странных вопросов.
-          </p>
-          <p>telegram: @juczken</p>
-      </header>
-    </div>
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className={cn(style.App)}>
+          <Layout>
+
+          </Layout>
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

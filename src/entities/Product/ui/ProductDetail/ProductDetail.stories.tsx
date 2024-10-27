@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ProductDetail from './ProductDetail';
+import ThemeProvider from '../../../../shared/providers/ThemeProvider/ThemeProvider';
+import { LanguageProvider } from '../../../../shared/providers/LanguageProvider/LanguageProvider';
+import React from 'react';
 
 const meta: Meta<typeof ProductDetail> = {
     title: 'Entities/ProductDetail',
@@ -14,6 +17,12 @@ const meta: Meta<typeof ProductDetail> = {
         price: { control: 'number', },
         photos: { control: 'array', },
     },
+    decorators: [(story) => (
+      <ThemeProvider>
+        <LanguageProvider>
+          {story()}
+        </LanguageProvider>
+      </ThemeProvider>)],
 };
 
 export default meta;

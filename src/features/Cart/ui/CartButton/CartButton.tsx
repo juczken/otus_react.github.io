@@ -4,6 +4,7 @@ import cn from 'clsx';
 import buttonStyle from '../../../../shared/ui/Button/Button.module.css';
 import style from './CartButton.module.css';
 import Counter from '../../../../shared/ui/Counter/Counter';
+import { useTranslation } from 'react-i18next';
 
 export type CartButtonProps = {
   count: number;
@@ -14,6 +15,7 @@ export type CartButtonProps = {
 };
 
 const CartButton: FC<CartButtonProps> = ({ count, max, disabled, onCountChange = (value: number) => { /* do nothing */ } }) => {
+  const {t}=useTranslation();
 
     const Increment = () => onCountChange(count + 1);
     const Decrement = () => onCountChange(count - 1);
@@ -31,7 +33,7 @@ const CartButton: FC<CartButtonProps> = ({ count, max, disabled, onCountChange =
           })}
           disabled={disabled}
           onClick={() => InputChange(1)}
-        >{'В корзину'}</button>
+        >{t('CartButton.button')}</button>
       ) : (
         <Counter count={count} min={0} max={max} disabled={disabled} onDecrement={Decrement} onIncrement={Increment} onInputChange={InputChange} />
       )}

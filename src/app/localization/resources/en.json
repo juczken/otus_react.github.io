@@ -1,0 +1,25 @@
+{
+    "category": {},
+    "operation": {
+      "amount": "{{amount, currency}}",
+      "description_undefined": "undefined"
+    },
+    "product": {
+      "price": "{{price, currency}}",
+      "oldPrice": "{{oldPrice, currency}}",
+      "description_undefined": "undefined",
+      "photo_alt": "Product {{name}}"
+    },
+    "OperationDetail": {
+      "edit": "Edit"
+    },
+    "ProductDetail": {},
+    "ProductItem": {},
+    "CartButton": {
+      "button": "Add to cart"
+    },
+    "CartItem": {
+      "button": "Remove"
+    }
+  }
+  

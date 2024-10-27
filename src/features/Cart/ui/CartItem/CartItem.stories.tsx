@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import CartItem from './CartItem';
+import ThemeProvider from '../../../../shared/providers/ThemeProvider/ThemeProvider';
+import { LanguageProvider } from '../../../../shared/providers/LanguageProvider/LanguageProvider';
+import React from 'react';
 
 const meta: Meta<typeof CartItem> = {
     title: 'Features/CartItem',
@@ -13,6 +16,12 @@ const meta: Meta<typeof CartItem> = {
         price: { control: 'number', },
         photo: { control: 'text', },
     },
+    decorators: [(story) => (
+      <ThemeProvider>
+        <LanguageProvider>
+          {story()}
+        </LanguageProvider>
+      </ThemeProvider>)],
 };
 
 export default meta;

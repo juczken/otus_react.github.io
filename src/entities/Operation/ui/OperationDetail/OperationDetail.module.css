@@ -4,6 +4,9 @@
     min-width: 150px;
     max-width: 300px;
     gap:5px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-color: var(--border-color);
 }
 
 .mainWrapper{
