@@ -1,7 +1,6 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import cn from 'clsx';
 import style from './Counter.module.css';
-import { on } from 'events';
 
 export type CounterProps = {
   count: number;

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import cn from 'clsx';
 import style from './ProductItem.module.css';
 import CartButton from '../../../../features/Cart/ui/CartButton/CartButton';

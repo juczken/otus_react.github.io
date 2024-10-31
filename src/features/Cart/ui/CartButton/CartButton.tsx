@@ -1,5 +1,5 @@
 // CartButton.tsx
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import cn from 'clsx';
 import buttonStyle from '../../../../shared/ui/Button/Button.module.css';
 import style from './CartButton.module.css';
