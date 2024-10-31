@@ -9,7 +9,6 @@ type ModalProps = {
 };
 
 const Modal: FC<ModalProps> = ({ visible, setVisible, children }) => {
-  debugger;
   return visible
     ? createPortal(
         <div className={style.modal_overlay}>
