@@ -37,8 +37,8 @@ const ComponentFetchList = <T extends { id: string },P>({ items, itemElement: It
         <>
             {visibleItems.map((item) => {
                 return (
-                    <div ref={item.index === visibleItems.length - 2 ? targetRef : null}>
-                        <ItemElement {...(mapItem(item.value))} key={item.value.id} />
+                    <div ref={item.index === visibleItems.length - 2 ? targetRef : null} key={item.value.id}>
+                        <ItemElement {...(mapItem(item.value))} />
                     </div>
                 )
             })}

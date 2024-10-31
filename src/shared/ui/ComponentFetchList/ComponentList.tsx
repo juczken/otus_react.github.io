@@ -34,8 +34,8 @@ const ComponentList = <T,>({ items, itemElement: ItemElement }: ComponentListPro
         <>
             {visibleItems.map((item) => {
                 return (
-                    <div ref={item.index === visibleItemsCount - 2 ? targetRef : null}>
-                        <ItemElement {...(item.value)} key={item.index} />
+                    <div ref={item.index === visibleItemsCount - 2 ? targetRef : null} key={item.index}>
+                        <ItemElement {...(item.value)} />
                     </div>
                 )
             })}
