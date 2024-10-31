@@ -7,12 +7,12 @@ type BaseOperation = {
     category: Category,
 }
 
-type Coast = BaseOperation & {
-    type: 'Coast',
+type Cost = BaseOperation & {
+    type: 'Cost',
 }
 
 type Profit = BaseOperation & {
     type: 'Profit',
 }
 
-type Operation = Coast | Profit
+type Operation = Cost | Profit
