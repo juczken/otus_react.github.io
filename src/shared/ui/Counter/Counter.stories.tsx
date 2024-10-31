@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import type { Meta, StoryContext, StoryFn, StoryObj } from '@storybook/react';
 import Counter, { CounterProps } from './Counter';
 import '../../../app/App.css';
-import { count } from 'console';
 
 const Template = (args: CounterProps) => {
   const [count, setCount] = useState(args.count);

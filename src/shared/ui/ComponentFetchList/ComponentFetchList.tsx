@@ -33,11 +33,8 @@ const ComponentFetchList = <T extends { id: string },P>({ items, itemElement: It
     const targetRef = useRef<HTMLDivElement>(null);
     useIntersectionObserve(targetRef, onIntersect, { threshold: 0.5 });
 
-    console.log(visibleItems)
-    console.log(items)
-
     return (
-        <>{console.log('render list')}
+        <>
             {visibleItems.map((item) => {
                 return (
                     <div ref={item.index === visibleItems.length - 2 ? targetRef : null} key={item.value.id}>

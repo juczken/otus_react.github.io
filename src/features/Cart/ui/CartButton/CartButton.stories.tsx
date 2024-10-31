@@ -8,7 +8,6 @@ import ThemeProvider from '../../../../shared/providers/ThemeProvider/ThemeProvi
 
 const Template = (args: CartButtonProps) => {
   const [count, setCount] = useState(args.count);
-  console.log(count);
   const onInputChange = (value: number) => setCount(value);
 
   return (

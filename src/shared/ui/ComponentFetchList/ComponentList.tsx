@@ -30,9 +30,6 @@ const ComponentList = <T,>({ items, itemElement: ItemElement }: ComponentListPro
     const targetRef = useRef<HTMLDivElement>(null);
     useIntersectionObserve(targetRef, onIntersect, { threshold: 0.5 });
 
-    console.log(visibleItems)
-    console.log(visibleItemsCount)
-
     return (
         <>
             {visibleItems.map((item) => {
