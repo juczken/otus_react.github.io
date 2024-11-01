@@ -12,8 +12,21 @@ export type CounterProps = {
   onInputChange?: (value: number) => void;
 };
 
-const Counter: FC<CounterProps> = ({ count, min, max, disabled = true, onIncrement = () => { /* do nothing */ }, onDecrement = () => { /* do nothing */ }, onInputChange = (value: number) => { /* do nothing */ } }) => {
-
+const Counter: FC<CounterProps> = ({
+  count,
+  min,
+  max,
+  disabled = true,
+  onIncrement = () => {
+    /* do nothing */
+  },
+  onDecrement = () => {
+    /* do nothing */
+  },
+  onInputChange = (value: number) => {
+    /* do nothing */
+  },
+}) => {
   return (
     <div className={cn(style.wrapper)}>
       <button
@@ -29,10 +42,10 @@ const Counter: FC<CounterProps> = ({ count, min, max, disabled = true, onIncreme
         value={count}
         disabled={disabled}
         onChange={(event) =>
-          (max === undefined || Number(event.target.value) <= max)
-            && (min === undefined || Number(event.target.value) >= min)
+          (max === undefined || Number(event.target.value) <= max) &&
+          (min === undefined || Number(event.target.value) >= min)
             ? onInputChange(Number(event.target.value))
-            : event.target.value = count.toString()
+            : (event.target.value = count.toString())
         }
       />
       <button

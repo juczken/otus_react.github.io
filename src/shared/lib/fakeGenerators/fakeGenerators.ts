@@ -26,7 +26,7 @@ export const createRandomOperation = (createdAt: string): Operation => {
     name: `Операция ${id}`,
     createdAt: createdAt,
     category: category,
-    amount: getRandom(10, 1000, 2) * (type==='Cost' ? -1 : 1),
+    amount: getRandom(10, 1000, 2) * (type === 'Cost' ? -1 : 1),
     desc: Math.random() < 0.5 ? `Операция ${type} id(${id}).` : undefined,
     type: type,
   };
@@ -37,9 +37,9 @@ const getRandomId = (): string => {
 };
 
 export const getRandomDate = (start: Date, end: Date) => {
-  var date = new Date(+start + Math.random() * (end.getTime() - start.getTime()));
-  var hour = Math.floor(Math.random() * 24);
-  var minute = hour === 0 ? 1 : Math.floor(Math.random() * 60);
+  const date = new Date(+start + Math.random() * (end.getTime() - start.getTime()));
+  const hour = Math.floor(Math.random() * 24);
+  const minute = hour === 0 ? 1 : Math.floor(Math.random() * 60);
   date.setHours(hour);
   date.setMinutes(minute);
   return date.toLocaleString('ru-RU', {
@@ -50,7 +50,7 @@ export const getRandomDate = (start: Date, end: Date) => {
     minute: '2-digit',
     hour12: false,
   });
-}
+};
 
 const getRandom = (min: number, max: number, digits: number): number => {
   return Math.round((min + Math.random() * (max - min)) * 10 ** digits) / 10 ** digits;

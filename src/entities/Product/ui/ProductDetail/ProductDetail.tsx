@@ -8,8 +8,8 @@ import { useTranslation } from 'react-i18next';
 //   'categoryName' | 'desc' | 'name' | 'photos' | 'price'
 // >;
 type ProductDetailProps = Pick<Product, 'desc' | 'name' | 'price'> & {
-  photos: Product['photo'][],
-  categoryName: Category['name'],
+  photos: Product['photo'][];
+  categoryName: Category['name'];
 };
 
 const ProductDetail: FC<ProductDetailProps> = ({ name, photos, desc, price, categoryName }) => {
@@ -19,10 +19,10 @@ const ProductDetail: FC<ProductDetailProps> = ({ name, photos, desc, price, cate
       <div className={style.wrapper}>
         <div className={style.imageWrapper}>
           {photos.length === 0 ? (
-            <img className={style.image} src="undefined.png" alt={t('product.photo',{name})} />
+            <img className={style.image} src="undefined.png" alt={t('product.photo', { name })} />
           ) : (
             photos.map((photo, index) => (
-              <img className={style.image} src={photo} alt={t('product.photo',{name})} key={index} />
+              <img className={style.image} src={photo} alt={t('product.photo', { name })} key={index} />
             ))
           )}
         </div>
@@ -35,7 +35,7 @@ const ProductDetail: FC<ProductDetailProps> = ({ name, photos, desc, price, cate
           <div className={style.button}>
             <CartButton count={0} />
           </div>
-          <div className={style.price}>{t('product.price',{price})}</div>
+          <div className={style.price}>{t('product.price', { price })}</div>
         </div>
       </div>
     </>

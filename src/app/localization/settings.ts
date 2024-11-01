@@ -5,13 +5,13 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import * as resources from './resources/';
 
 export enum Languages {
-    en = 'en',
-    ru = 'ru',
+  en = 'en',
+  ru = 'ru',
 }
 
 i18n
-  .use(LanguageDetector) 
-  .use(initReactI18next) 
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
     // resources,
     resources: {
@@ -30,8 +30,8 @@ i18n
         }
         return value;
       },
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   });
 
 export default i18n;

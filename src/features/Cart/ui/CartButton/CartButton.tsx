@@ -14,18 +14,25 @@ export type CartButtonProps = {
   onCountChange?: (value: number) => void;
 };
 
-const CartButton: FC<CartButtonProps> = ({ count, max, disabled, onCountChange = (value: number) => { /* do nothing */ } }) => {
-  const {t}=useTranslation();
+const CartButton: FC<CartButtonProps> = ({
+  count,
+  max,
+  disabled,
+  onCountChange = (value: number) => {
+    /* do nothing */
+  },
+}) => {
+  const { t } = useTranslation();
 
-    const Increment = () => onCountChange(count + 1);
-    const Decrement = () => onCountChange(count - 1);
-    const InputChange = (value: number) => onCountChange(value);
+  const Increment = () => onCountChange(count + 1);
+  const Decrement = () => onCountChange(count - 1);
+  const InputChange = (value: number) => onCountChange(value);
 
-    return (
+  return (
     <div className={cn(style.wrapper)}>
       {count === 0 ? (
-        <button className={
-          cn({
+        <button
+          className={cn({
             [buttonStyle.button_disable]: disabled,
             [buttonStyle.button_enable]: !disabled,
             [style.button]: !disabled,
@@ -33,9 +40,19 @@ const CartButton: FC<CartButtonProps> = ({ count, max, disabled, onCountChange =
           })}
           disabled={disabled}
           onClick={() => InputChange(1)}
-        >{t('CartButton.button')}</button>
+        >
+          {t('CartButton.button')}
+        </button>
       ) : (
-        <Counter count={count} min={0} max={max} disabled={disabled} onDecrement={Decrement} onIncrement={Increment} onInputChange={InputChange} />
+        <Counter
+          count={count}
+          min={0}
+          max={max}
+          disabled={disabled}
+          onDecrement={Decrement}
+          onIncrement={Increment}
+          onInputChange={InputChange}
+        />
       )}
     </div>
   );

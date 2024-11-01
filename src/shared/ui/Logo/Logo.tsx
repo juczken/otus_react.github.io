@@ -9,6 +9,6 @@ const Logo: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Logo
+export default Logo;

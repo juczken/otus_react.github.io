@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next';
 
 // type OperationItemProps = Pick<Operation&AddPropertyPrefix<Category,'category'>,'amount'|'categoryName'|'desc'|'name'>
 type OperationItemProps = Pick<Operation, 'amount' | 'desc' | 'name'> & {
-  categoryName: Category['name'],
-}
+  categoryName: Category['name'];
+};
 
 const OperationItem: React.FC<OperationItemProps> = ({ name, categoryName, desc, amount }) => {
   const { t } = useTranslation();

@@ -13,7 +13,9 @@ const Button: FC<ButtonProps> = ({
   lable,
   className,
   disabled = true,
-  onClick = () => { /* do nothing */ }
+  onClick = () => {
+    /* do nothing */
+  },
 }) => {
   return (
     <div className={style.wrapper}>

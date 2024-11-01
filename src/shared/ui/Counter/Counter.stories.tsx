@@ -12,7 +12,13 @@ const Template = (args: CounterProps) => {
 
   return (
     <div style={{ height: '30px', width: '100px' }}>
-      <Counter {...args} count={count} onIncrement={onIncrement} onDecrement={onDecrement} onInputChange={onInputChange} />
+      <Counter
+        {...args}
+        count={count}
+        onIncrement={onIncrement}
+        onDecrement={onDecrement}
+        onInputChange={onInputChange}
+      />
     </div>
   );
 };
@@ -21,8 +27,7 @@ const meta: Meta<typeof Template> = {
   title: 'Shared/Counter',
   component: Template,
   tags: ['autodocs'],
-  parameters: {
-  },
+  parameters: {},
 };
 
 export default meta;
@@ -32,9 +37,8 @@ export const SimpleCounter: Story = {
   args: {
     count: 0,
     disabled: false,
-  }
-}
-
+  },
+};
 
 export const LimitedCounter = Template.bind({});
 LimitedCounter.args = {

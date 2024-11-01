@@ -4,17 +4,13 @@ import { LanguageContext } from '../../contexts/LanguageContext/LanguageContext'
 import { Languages } from '../../../app/localization/settings';
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const { i18n } = useTranslation();
-    const [currentLanguage, setCurrentLanguage] = useState(i18n.language as Languages);
+  const { i18n } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language as Languages);
 
-    const switchLanguage = (language: Languages) => {
-        i18n.changeLanguage(language); // смена языка в i18next
-        setCurrentLanguage(language);
-    };
+  const switchLanguage = (language: Languages) => {
+    i18n.changeLanguage(language); // смена языка в i18next
+    setCurrentLanguage(language);
+  };
 
-    return (
-        <LanguageContext.Provider value={{ currentLanguage, switchLanguage }}>
-            {children}
-        </LanguageContext.Provider>
-    );
+  return <LanguageContext.Provider value={{ currentLanguage, switchLanguage }}>{children}</LanguageContext.Provider>;
 };

@@ -8,20 +8,20 @@ const meta: Meta<typeof ProductItem> = {
   title: 'Entities/ProductItem',
   component: ProductItem,
   tags: ['autodocs'],
-  parameters: {
-  },
+  parameters: {},
   argTypes: {
-    desc: { control: 'text', },
-    name: { control: 'text', },
-    price: { control: 'number', },
-    photo: { control: 'text', },
+    desc: { control: 'text' },
+    name: { control: 'text' },
+    price: { control: 'number' },
+    photo: { control: 'text' },
   },
-  decorators: [(story) => (
-    <ThemeProvider>
-      <LanguageProvider>
-        {story()}
-      </LanguageProvider>
-    </ThemeProvider>)],
+  decorators: [
+    (story) => (
+      <ThemeProvider>
+        <LanguageProvider>{story()}</LanguageProvider>
+      </ThemeProvider>
+    ),
+  ],
 };
 
 export default meta;
@@ -33,7 +33,7 @@ export const OrdinaryProductItem: Story = {
     name: 'Lorem ipsum',
     price: 19.95,
     photo: 'https://via.placeholder.com/500.png?text=Lorem+ipsum',
-  }
+  },
 };
 
 export const MissingPhotoProductItem: Story = {
@@ -42,7 +42,7 @@ export const MissingPhotoProductItem: Story = {
     name: 'Lorem ipsum',
     price: 19.95,
     photo: 'https://wrong.com/miss.png',
-  }
+  },
 };
 
 export const CutDescriptionProductItem: Story = {
@@ -51,7 +51,7 @@ export const CutDescriptionProductItem: Story = {
     name: 'Lorem ipsum',
     price: 19.95,
     photo: 'https://via.placeholder.com/500.png?text=Lorem+ipsum',
-  }
+  },
 };
 
 export const MissingDescriptionProductItem: Story = {
@@ -60,6 +60,5 @@ export const MissingDescriptionProductItem: Story = {
     name: 'Lorem ipsum',
     price: 19.95,
     photo: 'https://via.placeholder.com/500.png?text=Lorem+ipsum',
-  }
+  },
 };
-

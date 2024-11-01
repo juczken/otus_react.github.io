@@ -1,9 +1,9 @@
 import React from 'react';
-import cn from 'clsx'
+import cn from 'clsx';
 import style from './App.css';
 import ThemeProvider from '../shared/providers/ThemeProvider/ThemeProvider';
 import Layout from '../shared/ui/Layout/Layout';
-import './localization'
+import './localization';
 import { LanguageProvider } from '../shared/providers/LanguageProvider/LanguageProvider';
 
 function App() {
@@ -11,9 +11,7 @@ function App() {
     <ThemeProvider>
       <LanguageProvider>
         <div className={cn(style.App)}>
-          <Layout>
-
-          </Layout>
+          <Layout></Layout>
         </div>
       </LanguageProvider>
     </ThemeProvider>

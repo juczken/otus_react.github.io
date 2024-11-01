@@ -8,10 +8,18 @@ const LanguageSwitcher: React.FC = () => {
 
   return (
     <div className={style.wrapper}>
-      <button className={style.button} onClick={() => switchLanguage(Languages.en)} hidden={currentLanguage === Languages.en}>
+      <button
+        className={style.button}
+        onClick={() => switchLanguage(Languages.en)}
+        hidden={currentLanguage === Languages.en}
+      >
         English
       </button>
-      <button className={style.button} onClick={() => switchLanguage(Languages.ru)} hidden={currentLanguage === Languages.ru}>
+      <button
+        className={style.button}
+        onClick={() => switchLanguage(Languages.ru)}
+        hidden={currentLanguage === Languages.ru}
+      >
         Русский
       </button>
     </div>

@@ -6,24 +6,24 @@ import { useTranslation } from 'react-i18next';
 
 // type OperationDetailProps = Pick<Operation & AddPropertyPrefix<Category, 'category'>, 'amount' | 'categoryName' | 'createdAt' | 'desc' | 'name'>
 type OperationDetailProps = Pick<Operation, 'amount' | 'createdAt' | 'desc' | 'name'> & {
-  categoryName: Category['name'],
-}
+  categoryName: Category['name'];
+};
 
 const OperationDetail: React.FC<OperationDetailProps> = ({ name, categoryName, createdAt, desc, amount }) => {
   const { t } = useTranslation();
   return (
     <div className={cn(styles.wrapper)}>
-      <div className={cn(styles.mainWrapper)} >
-        <div className={cn(styles.createAt)} >{createdAt}</div>
-        <div className={cn(styles.total)} style={{ color: amount >= 0 ? 'green' : 'red' }} >
-          {t('operation.amount',{amount})}
+      <div className={cn(styles.mainWrapper)}>
+        <div className={cn(styles.createAt)}>{createdAt}</div>
+        <div className={cn(styles.total)} style={{ color: amount >= 0 ? 'green' : 'red' }}>
+          {t('operation.amount', { amount })}
         </div>
       </div>
       <span className={cn(styles.name)}>{name}</span>
       <span className={cn(styles.category)}>{categoryName}</span>
       <div className={cn(styles.description)}>{desc || t('operation.description_undefined')}</div>
-      <div className={cn(styles.editWrapper)} >
-        <div className={cn(styles.edit)} >
+      <div className={cn(styles.editWrapper)}>
+        <div className={cn(styles.edit)}>
           <Button className={cn(styles.editButton)} lable={t('OperationDetail.edit')} />
         </div>
       </div>

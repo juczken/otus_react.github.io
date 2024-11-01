@@ -11,7 +11,7 @@ const Header: React.FC = () => {
         <Logo />
       </div>
       {/* <div className={style.themeSwitcher} onClick={() => toggleTheme()}>{'\u{263d}\u{263c}'}</div> */}
-      <div style={{ display: 'flex'}}>
+      <div style={{ display: 'flex' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {/* <button className={style.themeSwitcher} onClick={() => toggleTheme()}>{theme === 'light' ? '\u{263d}' : '\u{263c}'}</button> */}
           <ThemeSwitcher />
@@ -25,4 +25,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header
+export default Header;

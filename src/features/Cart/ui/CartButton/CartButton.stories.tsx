@@ -5,7 +5,6 @@ import '../../../../app/App.css';
 import { LanguageProvider } from '../../../../shared/providers/LanguageProvider/LanguageProvider';
 import ThemeProvider from '../../../../shared/providers/ThemeProvider/ThemeProvider';
 
-
 const Template = (args: CartButtonProps) => {
   const [count, setCount] = useState(args.count);
   const onInputChange = (value: number) => setCount(value);
@@ -21,13 +20,11 @@ const Template = (args: CartButtonProps) => {
   );
 };
 
-
 const meta: Meta<typeof Template> = {
   title: 'Features/CartButton',
   component: Template,
   tags: ['autodocs'],
-  parameters: {
-  },
+  parameters: {},
 };
 
 export default meta;
@@ -38,17 +35,16 @@ export const WithoutProductCartButton: Story = {
     count: 0,
     max: undefined,
     disabled: false,
-  }
-}
+  },
+};
 
 export const WithProductCartButton: Story = {
   args: {
     count: 5,
     max: undefined,
     disabled: false,
-  }
-}
-
+  },
+};
 
 export const LimitedCartButton = Template.bind({});
 LimitedCartButton.args = {

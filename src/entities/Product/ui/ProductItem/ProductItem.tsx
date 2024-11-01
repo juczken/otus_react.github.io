@@ -12,13 +12,13 @@ const ProductItem: FC<ProductItemProps> = ({ price, photo, name, desc }) => {
   return (
     <div className={cn(style.wrapper)}>
       <div>
-        <img className={cn(style.image)} src={photo} alt={t('product.photo',{name})} />
+        <img className={cn(style.image)} src={photo} alt={t('product.photo', { name })} />
       </div>
       <div className={cn(style.title)}>
         <h3>{name}</h3>
       </div>
       <div className={cn(style.price)}>
-        <span>{t('product.price',{price})}</span>
+        <span>{t('product.price', { price })}</span>
       </div>
       <div className={cn(style.description)}>
         <p>{cutStringHelper(desc, 100) || t('product.description_undefined')}</p>
@@ -30,4 +30,4 @@ const ProductItem: FC<ProductItemProps> = ({ price, photo, name, desc }) => {
   );
 };
 
-export default ProductItem
+export default ProductItem;

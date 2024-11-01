@@ -4,7 +4,7 @@ import { Languages } from '../../../app/localization/settings';
 type LanguageContextProps = {
   currentLanguage: Languages;
   switchLanguage: (language: Languages) => void;
-}
+};
 
 export const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 

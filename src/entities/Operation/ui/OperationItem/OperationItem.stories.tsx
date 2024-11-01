@@ -8,20 +8,20 @@ const meta: Meta<typeof OperationItem> = {
   title: 'Entities/OperationItem',
   component: OperationItem,
   tags: ['autodocs'],
-  parameters: {
-  },
+  parameters: {},
   argTypes: {
-    amount: { control: 'number', },
-    categoryName: { control: 'text', },
-    desc: { control: 'text', },
-    name: { control: 'text', },
+    amount: { control: 'number' },
+    categoryName: { control: 'text' },
+    desc: { control: 'text' },
+    name: { control: 'text' },
   },
-  decorators: [(story) => (
-    <ThemeProvider>
-      <LanguageProvider>
-        {story()}
-      </LanguageProvider>
-    </ThemeProvider>)],
+  decorators: [
+    (story) => (
+      <ThemeProvider>
+        <LanguageProvider>{story()}</LanguageProvider>
+      </ThemeProvider>
+    ),
+  ],
 };
 
 export default meta;
@@ -33,7 +33,7 @@ export const OrdinaryOperationItem: Story = {
     categoryName: 'Category Lorem ipsum dolor sit amet consectetur adipiscing elit nostra.',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit nostra.',
     name: 'Lorem ipsum',
-  }
+  },
 };
 
 export const MissingDescriptoinOperationItem: Story = {
@@ -41,7 +41,7 @@ export const MissingDescriptoinOperationItem: Story = {
     amount: 19.95,
     categoryName: 'Category Lorem ipsum dolor sit amet consectetur adipiscing elit nostra.',
     name: 'Lorem ipsum',
-  }
+  },
 };
 
 export const CutDescriptionOperationItem: Story = {
@@ -50,5 +50,5 @@ export const CutDescriptionOperationItem: Story = {
     categoryName: 'Category Lorem ipsum dolor sit amet consectetur adipiscing elit nostra.',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit nostra vehicula ultricies, lobortis ornare dapibus montes vel fermentum sed dui.',
     name: 'Lorem ipsum',
-  }
+  },
 };
