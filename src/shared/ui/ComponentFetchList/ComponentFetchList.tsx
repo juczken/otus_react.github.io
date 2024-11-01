@@ -34,7 +34,7 @@ const ComponentFetchList = <T extends { id: string }, P>({
         .map((value, index) => ({ value, index: index }))
         .filter((value) => !visibleItems.some((item) => item.index === value.index)),
     ]);
-  }, [items, visibleItems]);
+  }, [items]);
 
   const targetRef = useRef<HTMLDivElement>(null);
   useIntersectionObserve(targetRef, onIntersect, { threshold: 0.5 });
