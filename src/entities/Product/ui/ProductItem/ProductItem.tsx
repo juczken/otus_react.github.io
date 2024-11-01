@@ -12,7 +12,7 @@ const ProductItem: FC<ProductItemProps> = ({ price, photo, name, desc }) => {
   return (
     <div className={cn(style.wrapper)}>
       <div>
-        <img className={cn(style.image)} src={photo} alt={t('product.photo', { name })} />
+        <img className={cn(style.image)} src={photo} alt={t('product.photo_alt', { name })} />
       </div>
       <div className={cn(style.title)}>
         <h3>{name}</h3>

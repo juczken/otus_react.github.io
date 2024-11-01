@@ -19,10 +19,10 @@ const ProductDetail: FC<ProductDetailProps> = ({ name, photos, desc, price, cate
       <div className={style.wrapper}>
         <div className={style.imageWrapper}>
           {photos.length === 0 ? (
-            <img className={style.image} src="undefined.png" alt={t('product.photo', { name })} />
+            <img className={style.image} src="undefined.png" alt={t('product.photo_alt', { name })} />
           ) : (
             photos.map((photo, index) => (
-              <img className={style.image} src={photo} alt={t('product.photo', { name })} key={index} />
+              <img className={style.image} src={photo} alt={t('product.photo_alt', { name })} key={index} />
             ))
           )}
         </div>
