@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import cn from 'clsx';
 import styles from './OperationItem.module.css';
 import cutStringHelper from '../../../../shared/lib/cutStringHelper';
@@ -25,4 +25,4 @@ const OperationItem: React.FC<OperationItemProps> = ({ name, categoryName, desc,
   );
 };
 
-export default OperationItem;
+export default memo(OperationItem) as typeof OperationItem;
