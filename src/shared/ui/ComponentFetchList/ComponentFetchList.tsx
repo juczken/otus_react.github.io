@@ -1,50 +1,30 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import useIntersectionObserve from '../../hooks/useIntersectionObserver';
 
-type ComponentFetchListProps<T, P> = React.HTMLAttributes<HTMLDivElement> & {
-  items: T[];
+type ComponentFetchListProps<T, P extends T> = React.HTMLAttributes<HTMLDivElement> & {
+  items: (T & { id: string })[];
   itemElement: React.ComponentType<P>;
+  elementProps?: Omit<P, keyof T>;
+  // fetchItems: (items: (T & { id: string })[]) => void;
   fetchItems: () => void;
-  mapItem: (item: T) => P;
 };
 
-type InfinityListVisibleItemType<T> = {
-  index: number;
-  value: T;
-};
-
-const ComponentFetchList = <T extends { id: string }, P>({
+const ComponentFetchList = <T extends { id: string }, P extends T>({
   items,
   itemElement: ItemElement,
+  elementProps,
   fetchItems,
-  mapItem,
 }: ComponentFetchListProps<T, P>) => {
-  const [visibleItems, setVisibleItems] = useState<InfinityListVisibleItemType<T>[]>(() =>
-    items.map((value, index) => ({ value, index }))
-  );
-
-  const onIntersect = () => {
-    fetchItems();
-  };
-
-  useEffect(() => {
-    setVisibleItems([
-      ...visibleItems,
-      ...items
-        .map((value, index) => ({ value, index: index }))
-        .filter((value) => !visibleItems.some((item) => item.index === value.index)),
-    ]);
-  }, [items]);
-
   const targetRef = useRef<HTMLDivElement>(null);
-  useIntersectionObserve(targetRef, onIntersect, { threshold: 0.5 });
+
+  useIntersectionObserve(targetRef, fetchItems, { threshold: 0.5 });
 
   return (
     <>
-      {visibleItems.map((item) => {
+      {items.map((item, index) => {
         return (
-          <div ref={item.index === visibleItems.length - 2 ? targetRef : null} key={item.value.id}>
-            <ItemElement {...mapItem(item.value)} />
+          <div ref={index === items.length - 2 ? targetRef : null} key={item.id}>
+            <ItemElement {...({ ...elementProps, ...(item as T) } as P)} />
           </div>
         );
       })}

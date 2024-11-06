@@ -20,16 +20,9 @@ const ProductFetchListViewer: FC = () => {
     ]);
   };
 
-  const mapItem = (item: Product) => {
-    return {
-      ...item,
-      categoryName: item.category.name,
-    };
-  };
-
   return (
     <>
-      <ComponentFetchList items={items} itemElement={ProductItem} fetchItems={doFetch} mapItem={mapItem} />
+      <ComponentFetchList items={items} itemElement={ProductItem} fetchItems={doFetch} />
     </>
   );
 };

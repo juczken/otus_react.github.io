@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import cn from 'clsx';
 import style from './ProductItem.module.css';
 import CartButton from '../../../../features/Cart/ui/CartButton/CartButton';
@@ -30,4 +30,4 @@ const ProductItem: FC<ProductItemProps> = ({ price, photo, name, desc }) => {
   );
 };
 
-export default ProductItem;
+export default memo(ProductItem) as typeof ProductItem;
