@@ -7,17 +7,14 @@ import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 const Header: React.FC = () => {
   return (
     <div className={style.header}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div className={style.item}>
         <Logo />
       </div>
-      {/* <div className={style.themeSwitcher} onClick={() => toggleTheme()}>{'\u{263d}\u{263c}'}</div> */}
-      <div style={{ display: 'flex' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          {/* <button className={style.themeSwitcher} onClick={() => toggleTheme()}>{theme === 'light' ? '\u{263d}' : '\u{263c}'}</button> */}
+      <div className={style.right_wrapper}>
+        <div className={style.item}>
           <ThemeSwitcher />
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          {/* <button className={style.themeSwitcher} onClick={() => toggleTheme()}>{theme === 'light' ? '\u{263d}' : '\u{263c}'}</button> */}
+        <div className={style.item}>
           <LanguageSwitcher />
         </div>
       </div>

@@ -10,6 +10,15 @@
     justify-content: space-between;
 }
 
+.item{
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+}
+
+.right_wrapper{
+    display: 'flex';
+}
 /* .themeSwitcher {
     background-color: var(--background-color);
     color: var(--text-color);

@@ -1,13 +1,15 @@
 import React, { FC } from 'react';
+import cn from 'clsx'
 import { LanguageProvider } from '../../shared/providers/LanguageProvider/LanguageProvider';
 import LanguageSwitcher from '../../shared/ui/LanguageSwitcher/LanguageSwitcher';
 import ProductItem from '../../entities/Product/ui/ProductItem/ProductItem';
+import style from './LanguageSwitcherViewer.module.css'
 
 const LanguageSwitcherViewer: FC = () => {
   return (
     <>
       <LanguageProvider>
-        <div style={{ height: '30px', width: '300px' }}>
+        <div className={cn(style.wrapper)}>
           <LanguageSwitcher />
         </div>
         <hr />
