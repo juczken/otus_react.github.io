@@ -14,7 +14,7 @@ const Modal: FC<ModalProps> = ({ visible, setVisible, children }) => {
         <div className={style.modal_overlay}>
           <div className={style.modal_box}>
             <div className={style.close} onClick={() => setVisible(false)}></div>
-            {children}
+            <div className={style.text}>{children}</div>
           </div>
         </div>,
         document.body

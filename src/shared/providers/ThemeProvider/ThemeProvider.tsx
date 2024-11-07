@@ -1,15 +1,15 @@
 import React, { useState, ReactNode, useEffect } from 'react';
-import { Theme, ThemeContext } from '../../contexts/ThemeContext/ThemeContext';
+import { darkTheme, lightTheme, Theme, ThemeContext } from '../../contexts/ThemeContext/ThemeContext';
 
 type ThemeProviderProps = {
   children: ReactNode;
 };
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>(lightTheme);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setTheme((prevTheme) => (prevTheme === lightTheme ? darkTheme : lightTheme));
   };
 
   useEffect(() => {
