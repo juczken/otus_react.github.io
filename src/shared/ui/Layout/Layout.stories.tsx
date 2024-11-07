@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Layout from './Layout';
 import ThemeProvider from '../../providers/ThemeProvider/ThemeProvider';
 import React from 'react';
+import { LanguageProvider } from '../../providers/LanguageProvider/LanguageProvider';
 
 const meta: Meta<typeof Layout> = {
   title: 'Shared/Layout',
@@ -13,7 +14,13 @@ const meta: Meta<typeof Layout> = {
   argTypes: {
     children: { control: 'text' },
   },
-  decorators: [(story) => <ThemeProvider>{story()}</ThemeProvider>],
+  decorators: [
+    (story) => (
+      <ThemeProvider>
+        <LanguageProvider>{story()}</LanguageProvider>
+      </ThemeProvider>
+    ),
+  ],
 };
 
 export default meta;
