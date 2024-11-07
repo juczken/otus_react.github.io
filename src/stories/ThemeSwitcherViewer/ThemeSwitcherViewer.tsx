@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import cn from 'clsx'
+import cn from 'clsx';
 import ThemeSwitcher from '../../shared/ui/ThemeSwitcher/ThemeSwitcher';
-import style from './ThemeSwitcherViewer.module.css'
+import style from './ThemeSwitcherViewer.module.css';
 import ThemeProvider from '../../shared/providers/ThemeProvider/ThemeProvider';
 import ProductItem from '../../entities/Product/ui/ProductItem/ProductItem';
 import '../../app/App.css';
