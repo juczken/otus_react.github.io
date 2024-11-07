@@ -11,13 +11,13 @@
 }
 
 .item{
-    display: 'flex';
-    align-items: 'center';
-    justify-content: 'center';
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .right_wrapper{
-    display: 'flex';
+    display: flex;
 }
 /* .themeSwitcher {
     background-color: var(--background-color);
