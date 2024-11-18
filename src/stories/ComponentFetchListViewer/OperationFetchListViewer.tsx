@@ -17,7 +17,7 @@ const OperationFetchListViewer: FC = () => {
       }))
   );
 
-  const doFetch = () => {
+  const fetchItems = () => {
     setItems([
       ...items,
       ...Array.from({ length: 20 })
@@ -34,7 +34,15 @@ const OperationFetchListViewer: FC = () => {
 
   return (
     <>
-      <ComponentFetchList items={items} itemElement={OperationItem} fetchItems={doFetch} />
+      <ComponentFetchList
+        items={items}
+        doFetch={fetchItems}
+        render={(item) => (
+          <div key={item.id}>
+            <OperationItem name={item.name} desc={item.desc} amount={item.amount} categoryName={item.categoryName} />
+          </div>
+        )}
+      />
     </>
   );
 };

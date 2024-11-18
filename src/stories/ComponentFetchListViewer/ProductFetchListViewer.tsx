@@ -11,7 +11,7 @@ const ProductFetchListViewer: FC = () => {
     )
   );
 
-  const doFetch = () => {
+  const fetchItems = () => {
     setItems([
       ...items,
       ...Array.from({ length: 20 }).map(() =>
@@ -22,7 +22,16 @@ const ProductFetchListViewer: FC = () => {
 
   return (
     <>
-      <ComponentFetchList items={items} itemElement={ProductItem} fetchItems={doFetch} />
+      <ComponentFetchList
+        items={items}
+        doFetch={fetchItems}
+        render={(item) => (
+          <div key={item.id}>
+            <ProductItem name={item.name} desc={item.desc} price={item.price} photo={item.photo} />
+          </div>
+        )}
+      />
+      {/* render={(item, index, count, ref) => <div ref={index === count - 2 ? ref : null} key={item.id} style={{ margin: '50px' }}><ProductItem name={item.name} desc={item.desc} price={item.price} photo={item.photo} /></div>} /> */}
     </>
   );
 };
