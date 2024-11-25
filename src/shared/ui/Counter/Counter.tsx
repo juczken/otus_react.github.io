@@ -16,7 +16,7 @@ const Counter: FC<CounterProps> = ({
   count,
   min,
   max,
-  disabled = true,
+  disabled,
   onIncrement = () => {
     /* do nothing */
   },
@@ -43,7 +43,7 @@ const Counter: FC<CounterProps> = ({
         disabled={disabled}
         onChange={(event) =>
           (max === undefined || Number(event.target.value) <= max) &&
-          (min === undefined || Number(event.target.value) >= min)
+            (min === undefined || Number(event.target.value) >= min)
             ? onInputChange(Number(event.target.value))
             : (event.target.value = count.toString())
         }
