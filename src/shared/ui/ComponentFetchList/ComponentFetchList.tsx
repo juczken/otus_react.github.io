@@ -26,4 +26,4 @@ const ComponentFetchList = <T,>({ items, render, doFetch }: ComponentFetchListPr
   // return <>{items.map(render)}</>
 };
 
-export  default memo(ComponentFetchList) as typeof ComponentFetchList;
+export default memo(ComponentFetchList) as typeof ComponentFetchList;

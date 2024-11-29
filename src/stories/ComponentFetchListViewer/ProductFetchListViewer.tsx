@@ -18,21 +18,20 @@ const ProductFetchListViewer: FC = () => {
         createRandomProduct(getRandomDate(new Date('2022-01-01'), new Date('2022-12-31')))
       ),
     ]);
-  },[items]);
+  }, [items]);
 
-  const renderCallback=useCallback((item:Product) => (
-    <div key={item.id}>
-      <ProductItem name={item.name} desc={item.desc} price={item.price} photo={item.photo} />
-    </div>
-  ),[])
+  const renderCallback = useCallback(
+    (item: Product) => (
+      <div key={item.id}>
+        <ProductItem name={item.name} desc={item.desc} price={item.price} photo={item.photo} />
+      </div>
+    ),
+    []
+  );
 
   return (
     <>
-      <ComponentFetchList
-        items={items}
-        doFetch={fetchItems}
-        render={renderCallback}
-      />
+      <ComponentFetchList items={items} doFetch={fetchItems} render={renderCallback} />
     </>
   );
 };
