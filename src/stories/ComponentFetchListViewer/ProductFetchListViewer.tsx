@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 
 import { createRandomProduct, getRandomDate } from '../../shared/lib/fakeGenerators/fakeGenerators';
 import ProductItem from '../../entities/Product/ui/ProductItem/ProductItem';
@@ -11,27 +11,28 @@ const ProductFetchListViewer: FC = () => {
     )
   );
 
-  const fetchItems = () => {
+  const fetchItems = useCallback(() => {
     setItems([
       ...items,
       ...Array.from({ length: 20 }).map(() =>
         createRandomProduct(getRandomDate(new Date('2022-01-01'), new Date('2022-12-31')))
       ),
     ]);
-  };
+  },[items]);
+
+  const renderCallback=useCallback((item:Product) => (
+    <div key={item.id}>
+      <ProductItem name={item.name} desc={item.desc} price={item.price} photo={item.photo} />
+    </div>
+  ),[])
 
   return (
     <>
       <ComponentFetchList
         items={items}
         doFetch={fetchItems}
-        render={(item) => (
-          <div key={item.id}>
-            <ProductItem name={item.name} desc={item.desc} price={item.price} photo={item.photo} />
-          </div>
-        )}
+        render={renderCallback}
       />
-      {/* render={(item, index, count, ref) => <div ref={index === count - 2 ? ref : null} key={item.id} style={{ margin: '50px' }}><ProductItem name={item.name} desc={item.desc} price={item.price} photo={item.photo} /></div>} /> */}
     </>
   );
 };

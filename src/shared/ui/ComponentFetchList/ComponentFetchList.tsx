@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import useIntersectionObserve from '../../hooks/useIntersectionObserver';
 
 type ComponentFetchListProps<T> = {
@@ -26,4 +26,4 @@ const ComponentFetchList = <T,>({ items, render, doFetch }: ComponentFetchListPr
   // return <>{items.map(render)}</>
 };
 
-export default ComponentFetchList;
+export  default memo(ComponentFetchList) as typeof ComponentFetchList;
