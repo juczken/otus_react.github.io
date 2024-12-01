@@ -16,7 +16,7 @@ const Counter: FC<CounterProps> = ({
   count,
   min,
   max,
-  disabled = true,
+  disabled,
   onIncrement = () => {
     /* do nothing */
   },
