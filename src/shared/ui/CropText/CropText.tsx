@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useState, useRef } from 'react';
 
+import useResizeObserver from '../../hooks/useResizeObserver';
+
 type CropTextProps = {
   text: string;
   crop: boolean;
@@ -18,7 +20,7 @@ const CropText = ({ text, crop }: CropTextProps) => {
   }, [text, crop]);
 
   useLayoutEffect(() => {
-    if (calculated) {
+    if (calculated || !crop) {
       return;
     }
     const postfix = '...';
@@ -35,27 +37,12 @@ const CropText = ({ text, crop }: CropTextProps) => {
     }
     ind.current++;
     setCroppedText([words.slice(0, ind.current + 1).join(' '), ind.current < words.length - 1 ? postfix : ''].join(''));
-  }, [text, croppedText, calculated]);
+  }, [text, croppedText, calculated, crop]);
 
-  useLayoutEffect(() => {
-    const prevWidth = element.current.clientWidth; //.getBoundingClientRect().width;
-    const observer = new ResizeObserver(([entry]) => {
-      // if (prevWidth !== entry.contentBoxSize[0].inlineSize) {
-      if (prevWidth !== entry.contentRect.width) {
-        setCroppedText(INIT_TEXT);
-        setCalculated(false);
-        ind.current = 0;
-      }
-    });
-    const currentRef = element.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-    return () => {
-      if (currentRef) {
-        observer.disconnect();
-      }
-    };
+  useResizeObserver(element, () => {
+    setCroppedText(INIT_TEXT);
+    setCalculated(false);
+    ind.current = 0;
   });
 
   return <div ref={element}>{crop ? croppedText : text}</div>;
