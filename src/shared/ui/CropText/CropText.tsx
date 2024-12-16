@@ -39,7 +39,7 @@ const CropText = ({ text, crop }: CropTextProps) => {
     setCroppedText([words.slice(0, ind.current + 1).join(' '), ind.current < words.length - 1 ? postfix : ''].join(''));
   }, [text, croppedText, calculated, crop]);
 
-  useResizeObserver(element, () => {
+  useResizeObserver(element, false, true, () => {
     setCroppedText(INIT_TEXT);
     setCalculated(false);
     ind.current = 0;
