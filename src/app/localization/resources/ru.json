@@ -1,24 +1,54 @@
 {
-    "categoty": {},
-    "operation": {
-        "amount": "{{amount, currency}}",
-        "description_undefined": "неописуемо"
-    },
-    "product": {
-        "price": "{{price, currency}}",
-        "oldPrice": "{{oldPrice, currency}}",
-        "description_undefined": "неописуемо",
-        "photo_alt": "Продукт {{name}}"
-    },
-    "OperationDetail": {
-        "edit": "Редактировать"
-    },
-    "ProductDetail": {},
-    "ProductItem": {},
-    "CartButton": {
-        "button": "В корзину"
-    },
-    "CartItem": {
-        "button": "Удалить"
+  "categoty": {},
+  "operation": {
+    "amount": "{{amount, currency}}",
+    "description_undefined": "неописуемо"
+  },
+  "product": {
+    "price": "{{price, currency}}",
+    "oldPrice": "{{oldPrice, currency}}",
+    "description_undefined": "неописуемо",
+    "photo_alt": "Продукт {{name}}"
+  },
+  "OperationDetail": {
+    "edit": "Редактировать"
+  },
+  "ProductDetail": {},
+  "ProductItem": {},
+  "CartButton": {
+    "button": "В корзину"
+  },
+  "CartItem": {
+    "button": "Удалить"
+  },
+  "EditProfile": {
+    "title": "Редактирование профиля",
+    "userName": "Имя",
+    "userNamePlaceholder": "Введите имя",
+    "about": "Описание",
+    "aboutPlaceholder": "Введите описание",
+    "button": "Сохранить",
+    "errors": {
+      "userNameRequired": "Имя обязательно"
     }
+  },
+  "ChangePassword": {
+    "title": "Смена пароля",
+    "oldPassword": "Старый пароль",
+    "oldPasswordPlaceholder": "Введите старый пароль",
+    "newPassword": "Новый пароль",
+    "newPasswordPlaceholder": "Введите новый пароль",
+    "confirmPassword": "Подтвердите пароль",
+    "confirmPasswordPlaceholder": "Подтвердите пароль",
+    "button": "Сохранить",
+    "errors": {
+      "oldPasswordRequired": "Старый пароль обязателен",
+      "newPasswordRequired": "Новый пароль обязателен",
+      "confirmPasswordRequired": "Подтверждение пароля обязательно",
+      "confirmPasswordMatch": "Пароли не совпадают"
+    }
+  },
+  "ProfileScreen": {
+    "title": "Профиль"
+  }
 }
