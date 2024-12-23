@@ -1,25 +1,54 @@
 {
-    "category": {},
-    "operation": {
-      "amount": "{{amount, currency}}",
-      "description_undefined": "undefined"
-    },
-    "product": {
-      "price": "{{price, currency}}",
-      "oldPrice": "{{oldPrice, currency}}",
-      "description_undefined": "undefined",
-      "photo_alt": "Product {{name}}"
-    },
-    "OperationDetail": {
-      "edit": "Edit"
-    },
-    "ProductDetail": {},
-    "ProductItem": {},
-    "CartButton": {
-      "button": "Add to cart"
-    },
-    "CartItem": {
-      "button": "Remove"
+  "category": {},
+  "operation": {
+    "amount": "{{amount, currency}}",
+    "description_undefined": "undefined"
+  },
+  "product": {
+    "price": "{{price, currency}}",
+    "oldPrice": "{{oldPrice, currency}}",
+    "description_undefined": "undefined",
+    "photo_alt": "Product {{name}}"
+  },
+  "OperationDetail": {
+    "edit": "Edit"
+  },
+  "ProductDetail": {},
+  "ProductItem": {},
+  "CartButton": {
+    "button": "Add to cart"
+  },
+  "CartItem": {
+    "button": "Remove"
+  },
+  "EditProfile": {
+    "title": "Profile editing",
+    "userName": "Name",
+    "userNamePlaceholder": "Enter name",
+    "about": "Description",
+    "aboutPlaceholder": "Enter description",
+    "button": "Save",
+    "errors": {
+      "userNameRequired": "Name is required"
     }
+  },
+  "ChangePassword": {
+    "title": "Password change",
+    "oldPassword": "Old password",
+    "oldPasswordPlaceholder": "Enter old password",
+    "newPassword": "New password",
+    "newPasswordPlaceholder": "Enter new password",
+    "confirmPassword": "Confirm password",
+    "confirmPasswordPlaceholder": "Confirm password",
+    "button": "Save",
+    "errors": {
+      "oldPasswordRequired": "Old password is required",
+      "newPasswordRequired": "New password is required",
+      "confirmPasswordRequired": "Password confirmation is required",
+      "confirmPasswordMatch": "Passwords do not match"
+    }
+  },
+  "ProfileScreen": {
+    "title": "Profile"
   }
-  
+}
