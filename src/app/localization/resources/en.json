@@ -60,6 +60,7 @@
     "button": "Log In",
     "errors": {
       "emailRequired": "Email is required",
+      "invalidEmail": "Invalid email",
       "passwordRequired": "Password is required"
     }
   },
@@ -74,6 +75,7 @@
     "button": "Register",
     "errors": {
       "emailRequired": "Email is required",
+      "invalidEmail": "Invalid email",
       "passwordRequired": "Password is required",
       "passwordLength": "Password must be at least {{passwordLength}} characters long",
       "confirmPasswordRequired": "Password confirmation is required",
