@@ -81,5 +81,30 @@
       "confirmPasswordRequired": "Password confirmation is required",
       "confirmPasswordMatch": "Passwords do not match"
     }
+  },
+  "ProductEdit": {
+    "name": "Name",
+    "namePlaceholder": "Enter name",
+    "photos": "Photos",
+    "photoPlaceholder": "Enter photo URL",
+    "addPhoto": "Add photo",
+    "removePhoto": "Remove",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter description",
+    "price": "Price",
+    "pricePlaceholder": "Enter price",
+    "oldPrice": "Old Price",
+    "oldPricePlaceholder": "Enter old price",
+    "category": "Category",
+    "selectCategory": "Select category",
+    "errors": {
+      "nameRequired": "Name is required",
+      "photosRequired": "At least one photo is required",
+      "photosInvalid": "Each URL must be valid",
+      "priceRequired": "Price is required",
+      "priceMin": "Price must be at least 0",
+      "categoryRequired": "Category is required"
+    },
+    "button": "Save"
   }
 }
