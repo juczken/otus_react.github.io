@@ -1,6 +1,6 @@
 import React from 'react';
-import EditProfile from './EditProfile/EditProfile';
-import ChangePassword from './ChangePassword/ChangePassword';
+import EditProfile, { EditProfileFields } from './EditProfile/EditProfile';
+import ChangePassword, { ChangePasswordFields } from './ChangePassword/ChangePassword';
 import cn from 'clsx';
 import styles from './ProfileScreen.module.css';
 import { useTranslation } from 'react-i18next';
@@ -8,11 +8,11 @@ import { useTranslation } from 'react-i18next';
 const ProfileScreen: React.FC = () => {
   const { t } = useTranslation();
 
-  const handleEditProfileSubmit = (data: { userName: string; about: string }) => {
+  const handleEditProfileSubmit = (data: EditProfileFields) => {
     console.log('onEditProfileSubmit', data);
   };
 
-  const handleChangePasswordSubmit = (data: { oldPassword: string; newPassword: string; confirmPassword: string }) => {
+  const handleChangePasswordSubmit = (data: ChangePasswordFields) => {
     console.log('onChangePasswordSubmit', data);
   };
 
