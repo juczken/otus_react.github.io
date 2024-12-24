@@ -71,7 +71,9 @@ export const SingUp: React.FC<SignUpProps> = ({ onSubmit }) => {
           })}
           placeholder={t('SignUp.confirmPasswordPlaceholder')}
         />
-        {typeof errors?.confirmPassword?.message === 'string' && <p>{errors.confirmPassword.message}</p>}
+        {typeof errors?.confirmPassword?.message === 'string' && (
+          <p className={styles.error}>{errors.confirmPassword.message}</p>
+        )}
       </div>
       <Button className={styles.button} lable={t('SignUp.button')} type="submit" disabled={false} />
     </form>

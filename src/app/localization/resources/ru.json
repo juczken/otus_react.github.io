@@ -60,6 +60,7 @@
     "button": "Войти",
     "errors": {
       "emailRequired": "Email обязателен",
+      "invalidEmail": "Некорректный email",
       "passwordRequired": "Пароль обязателен"
     }
   },
@@ -74,6 +75,7 @@
     "button": "Зарегистрироваться",
     "errors": {
       "emailRequired": "Email обязателен",
+      "invalidEmail": "Некорректный email",
       "passwordRequired": "Пароль обязателен",
       "passwordLength": "Пароль должен быть не менее {{passwordLength}} символов",
       "confirmPasswordRequired": "Подтверждение пароля обязательно",
