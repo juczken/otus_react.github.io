@@ -5,9 +5,14 @@ import cn from 'clsx';
 import styles from './EditProfile.module.css';
 import Button from '../../../shared/ui/Button/Button';
 
-interface EditProfileProps {
-  onSubmit: (data: { userName: string; about: string }) => void;
-}
+export type EditProfileFields = {
+  userName: string;
+  about: string;
+};
+
+type EditProfileProps = {
+  onSubmit: (data: EditProfileFields) => void;
+};
 
 const EditProfile: React.FC<EditProfileProps> = ({ onSubmit }) => {
   const {

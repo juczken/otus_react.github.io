@@ -50,5 +50,34 @@
   },
   "ProfileScreen": {
     "title": "Профиль"
+  },
+  "SignIn": {
+    "title": "Вход",
+    "email": "Email",
+    "emailPlaceholder": "Введите email",
+    "password": "Пароль",
+    "passwordPlaceholder": "Введите пароль",
+    "button": "Войти",
+    "errors": {
+      "emailRequired": "Email обязателен",
+      "passwordRequired": "Пароль обязателен"
+    }
+  },
+  "SignUp": {
+    "title": "Регистрация",
+    "email": "Email",
+    "emailPlaceholder": "Введите email",
+    "password": "Пароль",
+    "passwordPlaceholder": "Введите пароль",
+    "confirmPassword": "Подтвердите пароль",
+    "confirmPasswordPlaceholder": "Подтвердите пароль",
+    "button": "Зарегистрироваться",
+    "errors": {
+      "emailRequired": "Email обязателен",
+      "passwordRequired": "Пароль обязателен",
+      "passwordLength": "Пароль должен быть не менее {{passwordLength}} символов",
+      "confirmPasswordRequired": "Подтверждение пароля обязательно",
+      "confirmPasswordMatch": "Пароли не совпадают"
+    }
   }
 }
