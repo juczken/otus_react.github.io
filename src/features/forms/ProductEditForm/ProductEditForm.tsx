@@ -63,7 +63,7 @@ const ProductEditForm: React.FC<ProductEditFormProps> = ({ onSubmit }) => {
         <label className={cn(styles.label)}>{t('ProductEdit.photos')}</label>
         {fields.map((field, index) => (
           <div key={field.id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', width: '100%', alignItems: 'center' }}>
               <input
                 className={cn(styles.input, { [styles.error]: errors.photos })}
                 type="text"
