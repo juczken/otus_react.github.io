@@ -66,6 +66,7 @@ const ProductEditForm: React.FC<ProductEditFormProps> = ({ onSubmit }) => {
             <div style={{ display: 'flex', width: '100%', alignItems: 'center' }}>
               <input
                 className={cn(styles.input, { [styles.error]: errors.photos })}
+                style={{ paddingTop: '20px' }}
                 type="text"
                 {...register(`photos.${index}.url`, {
                   required: t('ProductEdit.errors.photosRequired'),
