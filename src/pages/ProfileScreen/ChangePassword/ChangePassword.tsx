@@ -5,9 +5,15 @@ import cn from 'clsx';
 import styles from './ChangePassword.module.css';
 import Button from '../../../shared/ui/Button/Button';
 
-interface ChangePasswordProps {
-  onSubmit: (data: { oldPassword: string; newPassword: string; confirmPassword: string }) => void;
-}
+export type ChangePasswordFields = {
+  oldPassword: string;
+  newPassword: string;
+  confirmPassword: string;
+};
+
+type ChangePasswordProps = {
+  onSubmit: (data: ChangePasswordFields) => void;
+};
 
 const ChangePassword: React.FC<ChangePasswordProps> = ({ onSubmit }) => {
   const {

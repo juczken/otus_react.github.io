@@ -31,9 +31,9 @@
   border: 1px solid;
 }
 
-button {
-  color: var(--text-color);
-  background-color: lightblue;
+.button {
+  /* color: var(--text-color);
+  background-color: lightblue; */
   padding: 10px 20px;
   border: none;
   cursor: pointer;
