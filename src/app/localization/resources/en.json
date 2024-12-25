@@ -99,7 +99,7 @@
     "selectCategory": "Select category",
     "errors": {
       "nameRequired": "Name is required",
-      "photosRequired": "At least one photo is required",
+      "photosRequired": "Photo is required",
       "photosInvalid": "Each URL must be valid",
       "priceRequired": "Price is required",
       "priceMin": "Price must be at least 0",

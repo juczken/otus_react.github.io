@@ -62,24 +62,26 @@ const ProductEditForm: React.FC<ProductEditFormProps> = ({ onSubmit }) => {
       <div>
         <label className={cn(styles.label)}>{t('ProductEdit.photos')}</label>
         {fields.map((field, index) => (
-          <div key={field.id} style={{ display: 'flex', alignItems: 'center' }}>
-            <input
-              className={cn(styles.input, { [styles.error]: errors.photos })}
-              type="text"
-              {...register(`photos.${index}.url`, {
-                required: t('ProductEdit.errors.photosRequired'),
-                validate: (value) => value.trim().startsWith('http') || t('ProductEdit.errors.photosInvalid'),
-              })}
-              placeholder={t('ProductEdit.photoPlaceholder')}
-            />
-            <Button
-              className={styles.button}
-              type="button"
-              onClick={() => remove(index)}
-              // style={{ marginLeft: "10px" }}
-              disabled={fields.length === 1}
-              lable={t('ProductEdit.removePhoto')}
-            />
+          <div key={field.id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <input
+                className={cn(styles.input, { [styles.error]: errors.photos })}
+                type="text"
+                {...register(`photos.${index}.url`, {
+                  required: t('ProductEdit.errors.photosRequired'),
+                  validate: (value) => value.trim().startsWith('http') || t('ProductEdit.errors.photosInvalid'),
+                })}
+                placeholder={t('ProductEdit.photoPlaceholder')}
+              />
+              <Button
+                className={styles.button}
+                type="button"
+                onClick={() => remove(index)}
+                // style={{ marginLeft: "10px" }}
+                disabled={fields.length === 1}
+                lable={t('ProductEdit.removePhoto')}
+              />
+            </div>
             {errors.photos && errors.photos[index]?.url && (
               <p className={styles.error}>{errors.photos[index]?.url?.message}</p>
             )}
@@ -106,19 +108,6 @@ const ProductEditForm: React.FC<ProductEditFormProps> = ({ onSubmit }) => {
       </div>
 
       {/* Price */}
-      {/* <div>
-        <label className={cn(styles.label)}>{t('ProductEdit.price')}</label>
-        <input
-          className={cn(styles.input, { [styles.error]: errors.price })}
-          type="number"
-          {...register("price", {
-            required: t('ProductEdit.errors.priceRequired'),
-            min: { value: 0, message: t('ProductEdit.errors.priceMin') },
-          })}
-          placeholder={t("ProductEdit.pricePlaceholder")}
-        />
-        {errors.price && <p className={styles.error}>{errors.price.message}</p>}
-      </div> */}
       <div>
         <label className={cn(styles.label)}>{t('ProductEdit.price')}</label>
         <input
