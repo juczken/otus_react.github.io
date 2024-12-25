@@ -50,5 +50,61 @@
   },
   "ProfileScreen": {
     "title": "Профиль"
+  },
+  "SignIn": {
+    "title": "Вход",
+    "email": "Email",
+    "emailPlaceholder": "Введите email",
+    "password": "Пароль",
+    "passwordPlaceholder": "Введите пароль",
+    "button": "Войти",
+    "errors": {
+      "emailRequired": "Email обязателен",
+      "invalidEmail": "Некорректный email",
+      "passwordRequired": "Пароль обязателен"
+    }
+  },
+  "SignUp": {
+    "title": "Регистрация",
+    "email": "Email",
+    "emailPlaceholder": "Введите email",
+    "password": "Пароль",
+    "passwordPlaceholder": "Введите пароль",
+    "confirmPassword": "Подтвердите пароль",
+    "confirmPasswordPlaceholder": "Подтвердите пароль",
+    "button": "Зарегистрироваться",
+    "errors": {
+      "emailRequired": "Email обязателен",
+      "invalidEmail": "Некорректный email",
+      "passwordRequired": "Пароль обязателен",
+      "passwordLength": "Пароль должен быть не менее {{passwordLength}} символов",
+      "confirmPasswordRequired": "Подтверждение пароля обязательно",
+      "confirmPasswordMatch": "Пароли не совпадают"
+    }
+  },
+  "ProductEdit": {
+    "name": "Имя",
+    "namePlaceholder": "Введите имя",
+    "photos": "Фотографии",
+    "photoPlaceholder": "Введите URL фотографии",
+    "addPhoto": "Добавить фото",
+    "removePhoto": "Удалить",
+    "description": "Описание",
+    "descriptionPlaceholder": "Введите описание",
+    "price": "Цена",
+    "pricePlaceholder": "Введите цену",
+    "oldPrice": "Старая цена",
+    "oldPricePlaceholder": "Введите старую цену",
+    "category": "Категория",
+    "selectCategory": "Выберите категорию",
+    "errors": {
+      "nameRequired": "Имя обязательно",
+      "photosRequired": "Укажите фотографию",
+      "photosInvalid": "Каждая ссылка должна быть корректным URL",
+      "priceRequired": "Цена обязательна",
+      "priceMin": "Цена должна быть не меньше 0",
+      "categoryRequired": "Категория обязательна"
+    },
+    "button": "Сохранить"
   }
 }
