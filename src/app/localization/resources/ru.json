@@ -99,7 +99,7 @@
     "selectCategory": "Выберите категорию",
     "errors": {
       "nameRequired": "Имя обязательно",
-      "photosRequired": "Укажите хотя бы одну фотографию",
+      "photosRequired": "Укажите фотографию",
       "photosInvalid": "Каждая ссылка должна быть корректным URL",
       "priceRequired": "Цена обязательна",
       "priceMin": "Цена должна быть не меньше 0",
