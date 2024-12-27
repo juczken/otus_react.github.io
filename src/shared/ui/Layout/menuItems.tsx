@@ -24,8 +24,8 @@ export const menuItems: NavItem[] = [
         path: '/services/web',
         element: <WebDevelopment />,
         dropdown: [
-          { label: 'React Development', path: '/services/web/react', element: <ReactDevelopment /> },
-          { label: 'Vanilla JS Development', path: '/services/web/js', element: <VanillaJSDevelopment /> },
+          { label: '- React Development', path: '/services/web/react', element: <ReactDevelopment /> },
+          { label: '- Vanilla JS Development', path: '/services/web/js', element: <VanillaJSDevelopment /> },
         ],
       },
       { label: 'Mobile Apps', path: '/services/mobile', element: <MobileApps /> },
