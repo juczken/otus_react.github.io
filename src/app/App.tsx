@@ -14,13 +14,13 @@ function App() {
       console.log(item);
       if (item.dropdown) {
         return (
-          <React.Fragment key={item.path}>
+          <React.Fragment key={item.path+item.label}>
             <Route path={item.path} element={item.element} />
             {generateRoutes(item.dropdown)}
           </React.Fragment>
         );
       }
-      return <Route key={item.path} path={item.path} element={item.element} />;
+      return <Route key={item.path+item.label} path={item.path} element={item.element} />;
     });
   };
   console.log('app');
