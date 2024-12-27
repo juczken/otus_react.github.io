@@ -17,7 +17,7 @@ const Layout: FC = () => {
           <Logo />
         </div>
         <div className={style.item}>
-          <NavigationBar menuItems={menuItems} />
+          {/*<NavigationBar menuItems={menuItems} />*/}
         </div>
         <div className={style.right_wrapper}>
           <div className={style.item}>
