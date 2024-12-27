@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import cn from 'clsx';
 import Header from '../Header/Header';
 import style from './Layout.module.css';
@@ -6,12 +6,9 @@ import Logo from '../Logo/Logo';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { Outlet } from 'react-router-dom';
 
-type LayoutProps = {
-  children?: ReactNode;
-};
-
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout: FC = () => {
   return (
     <div className={cn(style.Layout)}>
       <Header>
@@ -30,7 +27,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           </div>
         </div>
       </Header>
-      {children}
+      <Outlet />
     </div>
   );
 };
