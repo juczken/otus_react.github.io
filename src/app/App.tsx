@@ -30,8 +30,9 @@ function App() {
         <LanguageProvider>
           <div className={cn(style.App)}>
             <Routes>
-              <Route path="/" element={<Layout />} />
-              {generateRoutes(menuItems)}
+              <Route path="/" element={<Layout />}>
+                {generateRoutes(menuItems)}
+              </Route>
             </Routes>
           </div>
         </LanguageProvider>
