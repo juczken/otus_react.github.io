@@ -5,16 +5,38 @@ import ThemeProvider from '../shared/providers/ThemeProvider/ThemeProvider';
 import Layout from '../shared/ui/Layout/Layout';
 import './localization';
 import { LanguageProvider } from '../shared/providers/LanguageProvider/LanguageProvider';
+import { menuItems } from 'src/shared/ui/Layout/menuItems';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
+  const generateRoutes = (items: typeof menuItems) => {
+    return items.map((item) => {
+      if (item.dropdown) {
+        return (
+          <React.Fragment key={item.path}>
+            <Route path={item.path} element={item.element} />
+            {generateRoutes(item.dropdown)}
+          </React.Fragment>
+        );
+      }
+      return <Route key={item.path} path={item.path} element={item.element} />;
+    });
+  };
+
   return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <div className={cn(style.App)}>
-          <Layout></Layout>
-        </div>
-      </LanguageProvider>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider>
+        <LanguageProvider>
+          <div className={cn(style.App)}>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                {generateRoutes(menuItems)}
+              </Route>
+            </Routes>
+          </div>
+        </LanguageProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
