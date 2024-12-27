@@ -11,6 +11,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   const generateRoutes = (items: typeof menuItems) => {
     return items.map((item) => {
+      console.log(item);
       if (item.dropdown) {
         return (
           <React.Fragment key={item.path}>
@@ -22,7 +23,7 @@ function App() {
       return <Route key={item.path} path={item.path} element={item.element} />;
     });
   };
-
+  console.log('app');
   return (
     <BrowserRouter>
       <ThemeProvider>
