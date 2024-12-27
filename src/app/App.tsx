@@ -32,7 +32,7 @@ function App() {
           <div className={cn(style.App)}>
             <Routes>
               <Route path="/" element={<Layout />}>
-                {generateRoutes(menuItems)}
+                {/*generateRoutes(menuItems)*/}
               </Route>
             </Routes>
           </div>
