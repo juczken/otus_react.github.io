@@ -20,6 +20,7 @@ function App() {
           </React.Fragment>
         );
       }
+      console.log((<Route key={item.path + item.label} path={item.path} element={item.element} />).type, (<Route key={item.path + item.label} path={item.path} element={item.element} />).key)
       return <Route key={item.path} path={item.path} element={item.element} />;
     });
   };
