@@ -5,7 +5,7 @@ import ThemeProvider from '../shared/providers/ThemeProvider/ThemeProvider';
 import './localization';
 import { LanguageProvider } from '../shared/providers/LanguageProvider/LanguageProvider';
 import { menuItems } from 'src/shared/ui/Layout/menuItems';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Header from 'src/shared/ui/Header/Header';
 
 function App() {
@@ -29,27 +29,25 @@ function App() {
   };
   console.log('app');
   return (
-    <BrowserRouter>
-      <ThemeProvider>
-        <LanguageProvider>
-          <div className={cn(style.App)}>
-            <Header>{<button onClick={() => console.log('click')}>button</button>} </Header>
-            <Routes>
-              <Route
-                path="/"
-                element={<Header>{<button onClick={() => console.log('route click')}>button</button>} </Header>}
-              />
-              <Route path="/qw" element={<label>label</label>} />
-            </Routes>
-            {/* <Routes>
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className={cn(style.App)}>
+          {/* <Header>{<button onClick={() => console.log('click')}>button</button>} </Header> */}
+          <Routes>
+            <Route
+              path="/"
+              element={<Header>{<button onClick={() => console.log('route click')}>button</button>} </Header>}
+            />
+            <Route path="/qw" element={<label>label</label>} />
+          </Routes>
+          {/* <Routes>
               <Route path="/" element={<Layout />}>
                 {generateRoutes(menuItems)}
               </Route>
             </Routes> */}
-          </div>
-        </LanguageProvider>
-      </ThemeProvider>
-    </BrowserRouter>
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 
