@@ -11,7 +11,7 @@ const ReactDevelopment = () => <div>React Development Page</div>;
 const VanillaJSDevelopment = () => <div>Vanilla JS Development Page</div>;
 
 export const menuItems: NavItem[] = [
-  { label: 'Home', path: '/', element: <Home /> },
+  { label: 'Home', path: '/otus_react.github.io/', element: <Home /> },
   {
     label: 'Services',
     // path: null,
@@ -21,16 +21,24 @@ export const menuItems: NavItem[] = [
     dropdown: [
       {
         label: 'Web Development',
-        path: '/services/web',
+        path: '/otus_react.github.io/services/web',
         element: <WebDevelopment />,
         dropdown: [
-          { label: '- React Development', path: '/services/web/react', element: <ReactDevelopment /> },
-          { label: '- Vanilla JS Development', path: '/services/web/js', element: <VanillaJSDevelopment /> },
+          {
+            label: '- React Development',
+            path: '/otus_react.github.io/services/web/react',
+            element: <ReactDevelopment />,
+          },
+          {
+            label: '- Vanilla JS Development',
+            path: '/otus_react.github.io/services/web/js',
+            element: <VanillaJSDevelopment />,
+          },
         ],
       },
-      { label: 'Mobile Apps', path: '/services/mobile', element: <MobileApps /> },
+      { label: 'Mobile Apps', path: '/otus_react.github.io/services/mobile', element: <MobileApps /> },
     ],
   },
-  { label: 'About', path: '/about', element: <About /> },
-  { label: 'Contact', path: '/contact', element: <Contact /> },
+  { label: 'About', path: '/otus_react.github.io/about', element: <About /> },
+  { label: 'Contact', path: '/otus_react.github.io/contact', element: <Contact /> },
 ];
