@@ -5,7 +5,7 @@ import ThemeProvider from '../shared/providers/ThemeProvider/ThemeProvider';
 import './localization';
 import { LanguageProvider } from '../shared/providers/LanguageProvider/LanguageProvider';
 import { menuItems } from 'src/shared/ui/Layout/menuItems';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Header from 'src/shared/ui/Header/Header';
 
 function App() {
@@ -33,13 +33,14 @@ function App() {
       <ThemeProvider>
         <LanguageProvider>
           <div className={cn(style.App)}>
-            <Routes>
+            <Header>{<button onClick={() => console.log('click')}>button</button>} </Header>
+            {/* <Routes>
               <Route
                 path="/"
                 element={<Header>{<button onClick={() => console.log('click')}>button</button>} </Header>}
               />
               <Route path="/qw" element={<label>label</label>} />
-            </Routes>
+            </Routes> */}
             {/* <Routes>
               <Route path="/" element={<Layout />}>
                 {generateRoutes(menuItems)}
