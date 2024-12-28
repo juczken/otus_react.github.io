@@ -77,5 +77,37 @@ code {
     --disable-color:#1901014C;
     --disable-text-color:#FFFFFF4C;
 }
+.Header-module_header-rqBig {
+    padding: 5px 40px;
+    position: sticky;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    top: 0;
+    border-bottom: 1px solid #d8dbdf;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header-module_item-K3vU9{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header-module_right_wrapper-_DJbm{
+    display: flex;
+}
+/* .themeSwitcher {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
 
 /*# sourceMappingURL=main.css.map*/
