@@ -6,7 +6,7 @@ import './localization';
 import { LanguageProvider } from '../shared/providers/LanguageProvider/LanguageProvider';
 import { menuItems } from 'src/shared/ui/Layout/menuItems';
 import { Route, Routes } from 'react-router-dom';
-import Header from 'src/shared/ui/Header/Header';
+import Layout from 'src/shared/ui/Layout/Layout';
 
 function App() {
   const generateRoutes = (items: typeof menuItems) => {
@@ -33,18 +33,18 @@ function App() {
       <LanguageProvider>
         <div className={cn(style.App)}>
           {/* <Header>{<button onClick={() => console.log('click')}>button</button>} </Header> */}
-          <Routes>
+          {/* <Routes>
             <Route
               path="/"
               element={<Header>{<button onClick={() => console.log('route click')}>button</button>} </Header>}
             />
             <Route path="/qw" element={<label>label</label>} />
+          </Routes> */}
+          <Routes>
+            <Route path="/otus_react.github.io/" element={<Layout />}>
+              {generateRoutes(menuItems)}
+            </Route>
           </Routes>
-          {/* <Routes>
-              <Route path="/" element={<Layout />}>
-                {generateRoutes(menuItems)}
-              </Route>
-            </Routes> */}
         </div>
       </LanguageProvider>
     </ThemeProvider>
