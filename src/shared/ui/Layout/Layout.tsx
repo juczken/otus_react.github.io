@@ -6,6 +6,8 @@ import Logo from '../Logo/Logo';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { Outlet } from 'react-router-dom';
+import { menuItems } from './menuItems';
+import NavigationBar from '../NavigationBar/NavigationBar';
 
 const Layout: FC = () => {
   return (
@@ -14,7 +16,9 @@ const Layout: FC = () => {
         <div className={style.item}>
           <Logo />
         </div>
-        <div className={style.item}>{/*<NavigationBar menuItems={menuItems} />*/}</div>
+        <div className={style.item}>
+          <NavigationBar menuItems={menuItems} />
+        </div>
         <div className={style.right_wrapper}>
           <div className={style.item}>
             <ThemeSwitcher />
