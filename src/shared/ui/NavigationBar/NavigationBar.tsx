@@ -53,14 +53,14 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ menuItems }) => {
   return (
     <nav className={style.navbar}>
       {menuItems.map((item) => (
-        <div key={item.path+item.label} className={style.navItem}>
+        <div key={item.path + item.label} className={style.navItem}>
           <NavLink to={item.path} className={style.link}>
             {item.label}
           </NavLink>
           {item.dropdown && (
             <div className={style.dropdown}>
               {item.dropdown.map((subItem) => (
-                <NavLink key={subItem.path+subItem.label} to={subItem.path} className={style.link}>
+                <NavLink key={subItem.path + subItem.label} to={subItem.path} className={style.link}>
                   {subItem.label}
                 </NavLink>
               ))}
