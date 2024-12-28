@@ -41,7 +41,7 @@ function App() {
             <Route path="/qw" element={<label>label</label>} />
           </Routes> */}
           <Routes>
-            <Route path="/otus_react.github.io/" element={<Layout />}>
+            <Route path="/otus_react.github.io" element={<Layout />}>
               {generateRoutes(menuItems)}
             </Route>
           </Routes>
